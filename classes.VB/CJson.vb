@@ -98,7 +98,7 @@ Public Class CJson
             Dim aData() As Byte
             Dim oStringBuilder As New StringBuilder
             oStringBuilder.Append(strBodyRequest)
-            aData = Encoding.Default.GetBytes(oStringBuilder.ToString())
+            aData = Encoding.UTF8.GetBytes(oStringBuilder.ToString())
             oRequest.Headers.Add("ContentLength: " & CStr(aData.Length))
             Using oStream As IO.Stream = oRequest.GetRequestStream()
                 oStream.Write(aData, 0, aData.Length)
