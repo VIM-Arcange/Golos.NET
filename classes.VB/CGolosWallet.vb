@@ -536,6 +536,7 @@ Public Class CGolosWallet
         arrParams.Add(parent_permlink)
         arrParams.Add(title)
         arrParams.Add(body)
+        arrParams.Add(json)
         arrParams.Add(broadcast)
         Return call_api(Reflection.MethodBase.GetCurrentMethod.Name, arrParams)
     End Function
