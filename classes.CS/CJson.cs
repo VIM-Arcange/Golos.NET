@@ -76,7 +76,7 @@ namespace GolosAPI.CS
 					oRequest.Method = "POST";
 					oRequest.Accept = "application/json-rpc";
 					oRequest.ContentType = "application/json-rpc; charset=UTF-8";
-					strBodyRequest = strData.Replace("\r", "").Replace("\n", "").Replace("\r\n", "").Replace("\t", "");
+					strBodyRequest = strData;
 					break;
 
 				case EHTTPMethod.GET:
