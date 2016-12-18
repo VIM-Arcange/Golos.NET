@@ -72,7 +72,7 @@ Public Class CJson
                 oRequest.Method = "POST"
                 oRequest.Accept = "application/json-rpc"
                 oRequest.ContentType = "application/json-rpc; charset=UTF-8"
-                strBodyRequest = strData.Replace("\r", "").Replace("\n", "").Replace("\r\n", "").Replace("\t", "")
+                strBodyRequest = strData
             Case EHTTPMethod.GET
                 oRequest.Method = "GET"
                 oRequest.Headers.Add(String.Format("GET:{0} HTTP/1.1", strData))
