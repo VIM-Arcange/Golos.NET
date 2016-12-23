@@ -83,7 +83,9 @@ Public Class CGolosAPI
 
 #Region "IDisposable Support"
     Public Sub Dispose() Implements IDisposable.Dispose
-        m_oSocket.Dispose()
+        If Not m_oSocket Is Nothing Then
+            m_oSocket.Dispose()
+        End If
     End Sub
 #End Region
 
