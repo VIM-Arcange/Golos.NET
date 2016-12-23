@@ -101,7 +101,10 @@ namespace GolosAPI.CS
 
 		public void Dispose()
 		{
-			((IDisposable)m_oSocket).Dispose();
+			if( null != m_oSocket)
+			{
+				((IDisposable)m_oSocket).Dispose();
+			}
 		}
 		#endregion
 	}
